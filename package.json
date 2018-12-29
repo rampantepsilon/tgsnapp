@@ -1,6 +1,6 @@
 {
   "name": "tgsn_hub",
-  "version": "0.0.2",
+  "version": "0.0.3-alpha",
   "description": "TGSN Viewer App",
   "main": "main.js",
   "scripts": {

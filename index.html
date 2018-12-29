@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>The Gaming Saloon Network Hub 0.0.2</title>
+    <title>The Gaming Saloon Network Hub 0.0.3-alpha</title>
     <style>
     	html, body
     	{
@@ -17,6 +17,35 @@
     	{
     		color: #999999;
     	}
+    	ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		}
+
+		li {
+		  float: left;
+		  border-right: 1px solid #bbb;
+		}
+
+		li:last-child {
+			border-right: none;
+		}
+
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		/* Change the link color to #111 (black) on hover */
+		li a:hover {
+		  background-color: #111;
+		}
 	</style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -24,7 +53,7 @@
 
       	$(document).ready(function(){
 	        // Set trigger and container variables
-	        var trigger = $('#nav a'),
+	        var trigger = $('#nav ul li a'),
 	            container = $('#content');
 	        
 	        // Fire on click
@@ -47,12 +76,14 @@
     	<tr width="100%">
     		<td valign="top" align="center">
                 <nav id="nav">
-                    <a href="#" data-target="home">Home</a> | 
-        			<a href="#" data-target="site">Website</a> | 
-        			<a href="#" data-target="tgsn">TheGamingSaloonNetwork</a> | 
-        			<a href="#" data-target="tgsn2">TheGamingSaloonNetwork2</a> | 
-        			<a href="#" data-target="bs">BattleSaloon</a> | 
-        			<a href="#" data-target="bs2">BattleSaloon2</a>
+                    <ul>
+                    	<li><a href="#" data-target="home">Home</a></li>
+        				<li><a href="#" data-target="site">Website</a></li>
+        				<li><a href="#" data-target="tgsn">TheGamingSaloonNetwork</a></li>
+        				<li><a href="#" data-target="tgsn2">TheGamingSaloonNetwork2</a></li>
+        				<li><a href="#" data-target="bs">BattleSaloon</a></li>
+        				<li><a href="#" data-target="bs2">BattleSaloon2</a></li>
+        			</ul>
                 </nav>
     		</td>
     	</tr>

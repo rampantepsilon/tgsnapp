@@ -17,12 +17,18 @@
 </ul>
 
 <h2>Changelog</h2>
+<h3>v0.0.3 (Tentative Release 1/5/19)</h3>
+<ul>
+	<li>Added Support For Seamless Transitions</li>
+	<li>Updated Navigation Bar</li>
+</ul>
 <h3>v0.0.2</h3>
 <ul>
 	<li>Initial Public Release</li>
 	<li>Added Application Menu</li>
 	<li>Modified Twitch Embed to allow for resizing</li>
 	<li>Created Exectuables for Windows, MacOS, and Linux (64-bit)</li>
+</ul>
 <h3>v0.0.1</h3>
 <ul>
 	<li>Initial Build</li>
