@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Gaming Saloon Network Hub 0.0.2</title>
+    <style>
+    	html, body
+    	{
+    		height: 98%;
+    		color: white;
+    	}
+    	a, a:visited
+    	{
+    		color: white;
+    	}
+    	a:hover
+    	{
+    		color: #999999;
+    	}
+	</style>
+  </head>
+  <body style="background-image: url('images/background.jpg');">
+    <table width="100%" height="100%">
+    	<tr width="100%">
+    		<td valign="top" align="center">
+    			<a href="index.html">Home</a> | 
+    			<a href="site.html">Website</a> | 
+                <a href="tgsn.html">TheGamingSaloonNetwork</a> | 
+    			<a href="tgsn2.html">TheGamingSaloonNetwork2</a> | 
+    			<a href="bs.html">BattleSaloon</a> | 
+    			<a href="bs2.html">BattleSaloon2</a>
+    		</td>
+    	</tr>
+    	<tr style="height: 100%">
+    		<td style="height: 100%">
+    			<div id="twitch-embed" style="height: 100%"></div>
+    		</td>
+    	</tr>
+    </table>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+    	var embed = new Twitch.Embed("twitch-embed", {
+        	width: '100%',
+        	height: '100%',
+    	    channel: 'thegamingsaloonnetwork',
+	        chat: "default",
+        	allowfullscreen: "true",
+    	    theme: "dark",
+	        autoplay: "true",
+      	});
+
+    	embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        	var player = embed.getPlayer();
+        	player.setVolume(0.9);
+        	player.setMuted(false);
+        	player.play();
+      	});
+    </script>
+  </body>
+</html>

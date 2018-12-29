@@ -1,0 +1,19 @@
+{
+  "name": "tgsn",
+  "version": "0.0.2",
+  "description": "TGSN Viewer App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "electron ."
+  },
+  "author": "Tom \"RampantEpsilon\" Ware",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.0.0",
+    "nodejs": "0.0.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^13.0.1"
+  }
+}
