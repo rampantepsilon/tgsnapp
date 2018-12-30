@@ -1,7 +1,8 @@
 {
   "name": "tgsn_hub",
-  "version": "0.0.3-alpha",
+  "version": "1.1.0",
   "description": "TGSN Viewer App",
+  "repository": "https://github.com/rampantepsilon/tgsnapp",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -11,8 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "electron": "^4.0.0",
+    "electron-log": "^2.2.17",
     "jquery": "^3.3.1",
-    "nodejs": "0.0.0"
+    "nodejs": "0.0.0",
+    "update-electron-app": "^1.3.0",
+    "xhr2": "^0.1.4",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "electron-packager": "^13.0.1"

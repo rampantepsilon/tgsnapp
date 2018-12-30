@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>The Gaming Saloon Network Hub 0.0.3-alpha</title>
+    <title>The Gaming Saloon Network Hub 1.1.0</title>
     <style>
     	html, body
     	{
@@ -30,9 +30,9 @@
 		  border-right: 1px solid #bbb;
 		}
 
-		li:last-child {
+		/*li:last-child {
 			border-right: none;
-		}
+		}*/
 
 		li a {
 		  display: block;
@@ -52,18 +52,41 @@
     	window.$ = window.jQuery = require('jquery');
 
       	$(document).ready(function(){
+      		$("#articles").hide();
+      		$("#articleHidden").hide()
+            $("#articleShown").hide();
+
 	        // Set trigger and container variables
 	        var trigger = $('#nav ul li a'),
-	            container = $('#content');
-	        
-	        // Fire on click
+	            container = $('#content'),
+	            tgscontainer = $('#articles');
+
+        	// Fire on click
 	        trigger.on('click', function(){
 	          	// Set $this for re-use. Set target from data attribute
 	          	var $this = $(this),
 	            	target = $this.data('target');       
-	          
-	          	// Load target page into container
-	          	container.load(target + '.html');
+	          	if (target == 'tgsinformation') {
+	          		$("#articles").show();          		
+	          		$("#articleHidden").show();
+	          		$("#articleShown").hide();
+	          	}
+	          	else if (target == 'tgsinformation2') {
+	          		$("#articles").hide();
+	          		$("#articleHidden").hide();
+	          		$("#articleShown").show();
+	          	}
+                else if (target == 'tgsn'){
+                    $("#articleShown").show();
+                    container.load(target + '.html');
+                }
+	          	else {
+                    $("#articles").hide();
+                    $("#articleHidden").hide()
+                    $("#articleShown").hide();
+		          	// load target page into container
+		          	container.load(target + '.html');
+		        }
 	          
 	          	// Stop normal link behavior
 	          	return false;
@@ -74,7 +97,7 @@
   <body style="background-image: url('images/background.jpg');">
     <table width="100%" height="100%">
     	<tr width="100%">
-    		<td valign="top" align="center">
+    		<td valign="top" align="center" colspan="2">
                 <nav id="nav">
                     <ul>
                     	<li><a href="#" data-target="home">Home</a></li>
@@ -83,11 +106,18 @@
         				<li><a href="#" data-target="tgsn2">TheGamingSaloonNetwork2</a></li>
         				<li><a href="#" data-target="bs">BattleSaloon</a></li>
         				<li><a href="#" data-target="bs2">BattleSaloon2</a></li>
+        				<!--<li><a href="#" id="information-dialog">TGS Articles</a></li>
+		                        <li><a href="#" id="tgsn-dashboard">TGSN Dashboard</a></li>-->
+        				<li id="articleShown"><a href="#" data-target="tgsinformation">TGS Articles</a></li>
+        				<li id="articleHidden"><a href="#" data-target="tgsinformation2">TGS Articles</a></li>
         			</ul>
                 </nav>
     		</td>
     	</tr>
     	<tr style="height: 100%">
+    		<td width="640px" id="articles">
+    			<object type="text/html" data="https://docs.google.com/document/d/1Olmkd5YKxz84c0G8BM20qBqXaWCPvdMV_mDkFQZl1TQ/edit?usp=sharing" width="100%" height="100%"></object>
+    		</td>
     		<td style="height: 100%" align="center" id="content">
                 <img src="images/tgsn.jpg" width="1024" height="576"/><br>
                 <!--<button class="demo-button" id="information-dialog">View Demo</button>-->

@@ -7,9 +7,9 @@
 <ul>
 	<li>Add tools to add content to the TGSN site (Staff Only)</li>
 	<li>Add tools to modify dashboard content (Staff Only)</li>
+	<li>Add Automatic Updater for App (Delayed until Q2 2019)</li>
 	<li>QoL Changes for additional support
 		<ul>
-			<li>Modifying pages for seamless transitions</li>
 			<li>Allowing users to view multiple channels simultaneously</li>
 			<li>Allowing users to view site content while watching streams</li>
 		</ul>
@@ -17,10 +17,16 @@
 </ul>
 
 <h2>Changelog</h2>
-<h3>v0.0.3 (Tentative Release 1/5/19)</h3>
+<h3>v1.1.0</h3
+<ul>
+	<li>Add a way to view most recent TGS Articles</li>
+	<li>Allow users to choose to view Articles alongside watching TGSN</li>
+</ul>
+<h3>v1.0.0</h3>
 <ul>
 	<li>Added Support For Seamless Transitions</li>
 	<li>Updated Navigation Bar</li>
+	<li>Added Taskbar Icon</li>
 </ul>
 <h3>v0.0.2</h3>
 <ul>

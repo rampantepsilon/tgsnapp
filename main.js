@@ -1,9 +1,17 @@
 const {BrowserWindow, Menu, app, shell, dialog2} = require('electron')
+var XMLHttpRequest = require("xhr2").XMLHttpRequest;
+var xhr = new XMLHttpRequest();
+
+//App Name
+function label(){
+  const label = 'TGSN App';
+  return label;
+}
 
 //Build Number
 function buildNum(){
-	const build = '2018.12.28.1940';
-	return build;
+  const build = '2018.12.30.1510';
+  return build;
 }
 
 //Application Menu
@@ -72,17 +80,17 @@ let template = [{
   label: 'About',
   role: 'help',
   submenu: [{
-    label: 'TGSN App (Dev Build)',
-  	},{
-  	label: "Version " + versionNum(),
-  	},{
-  	label: "Build: " + buildNum(),
-  	}]
+    label: label(),
+    },{
+    label: "Version " + versionNum(),
+    },{
+    label: "Build: " + buildNum(),
+    }]
 }]
 
 function versionNum(){
-	const version = app.getVersion();
-	return version;
+  const version = app.getVersion();
+  return version;
 }
 
 function addUpdateMenuItems (items, position) {
@@ -207,21 +215,42 @@ app.on('window-all-closed', () => {
 let win
 
 function createWindow () {
+  const mainWindow = new BrowserWindow({
+    width: 1280,
+    height: 720,
+    icon: __dirname + "/tgsn.png",
+    webPreferences: {
+      nativeWindowOpen: true
+    }
+  })
+  mainWindow.webContents.on('new-window', (event, url, frameName, disposition, options, additionalFeatures) => {
+    if (frameName === 'modal') {
+      // open window as modal
+      event.preventDefault()
+      Object.assign(options, {
+        modal: true,
+        parent: mainWindow,
+        width: 1280,
+        height: 720
+      })
+      event.newGuest = new BrowserWindow(options)
+    }
+  })
   // Create the browser window.
-  win = new BrowserWindow({ width: 1280, height: 720 })
+  //win = new BrowserWindow({ width: 1280, height: 720, icon: __dirname + '/tgsn.png' })
 
   // and load the index.html of the app.
-  win.loadFile('index.html')
+  mainWindow.loadFile('index.html')
 
   // Open the DevTools.
   //win.webContents.openDevTools()
 
   // Emitted when the window is closed.
-  win.on('closed', () => {
+  mainWindow.on('closed', () => {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
-    win = null
+    //win = null
   })
 }
 
@@ -251,18 +280,19 @@ app.on('activate', () => {
 // code. You can also put them in separate files and require them here.
 
 
+
 //Dialog Box
 const {ipcMain, dialog} = require('electron')
 
 ipcMain.on('open-information-dialog', (event) => {
-	const options = {
-		type: 'info',
-		title: 'Information',
-		message: "This is an information dialog. Isn't it nice?",
-		buttons: ['Yes', 'No']
-	}
-	dialog.showMessageBox(options, (index) => {
-		event.sender.send('information-dialog-selection', index)
-	})
+  const options = {
+    type: 'info',
+    title: 'Information',
+    message: 'messageText',
+    buttons: ['Yes', 'No']
+  }
+  dialog.showMessageBox(options, (index) => {
+    event.sender.send('information-dialog-selection', index)
+  })
 })
 
