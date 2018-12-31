@@ -17,7 +17,12 @@
 </ul>
 
 <h2>Changelog</h2>
-<h3>v1.1.0</h3
+<h3>v1.2.0 (Tentative Release Date 1/10/2019)</h3>
+<ul>
+	<li>Added TGSN Twitter</li>
+	<li>Updated Navigation Bar to remove clutter</li>
+</ul>
+<h3>v1.1.0</h3>
 <ul>
 	<li>Add a way to view most recent TGS Articles</li>
 	<li>Allow users to choose to view Articles alongside watching TGSN</li>
