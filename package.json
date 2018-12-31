@@ -1,6 +1,6 @@
 {
   "name": "tgsn_hub",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "TGSN Viewer App",
   "repository": "https://github.com/rampantepsilon/tgsnapp",
   "main": "main.js",

@@ -2,116 +2,36 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>The Gaming Saloon Network Hub 1.1.0</title>
-    <style>
-    	html, body
-    	{
-    		height: 98%;
-    		color: white;
-    	}
-    	a, a:visited
-    	{
-    		color: white;
-    	}
-    	a:hover
-    	{
-    		color: #999999;
-    	}
-    	ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333;
-		}
-
-		li {
-		  float: left;
-		  border-right: 1px solid #bbb;
-		}
-
-		/*li:last-child {
-			border-right: none;
-		}*/
-
-		li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		}
-
-		/* Change the link color to #111 (black) on hover */
-		li a:hover {
-		  background-color: #111;
-		}
-	</style>
+    <title>The Gaming Saloon Network Hub 1.2.0</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-    	window.$ = window.jQuery = require('jquery');
-
-      	$(document).ready(function(){
-      		$("#articles").hide();
-      		$("#articleHidden").hide()
-            $("#articleShown").hide();
-
-	        // Set trigger and container variables
-	        var trigger = $('#nav ul li a'),
-	            container = $('#content'),
-	            tgscontainer = $('#articles');
-
-        	// Fire on click
-	        trigger.on('click', function(){
-	          	// Set $this for re-use. Set target from data attribute
-	          	var $this = $(this),
-	            	target = $this.data('target');       
-	          	if (target == 'tgsinformation') {
-	          		$("#articles").show();          		
-	          		$("#articleHidden").show();
-	          		$("#articleShown").hide();
-	          	}
-	          	else if (target == 'tgsinformation2') {
-	          		$("#articles").hide();
-	          		$("#articleHidden").hide();
-	          		$("#articleShown").show();
-	          	}
-                else if (target == 'tgsn'){
-                    $("#articleShown").show();
-                    container.load(target + '.html');
-                }
-	          	else {
-                    $("#articles").hide();
-                    $("#articleHidden").hide()
-                    $("#articleShown").hide();
-		          	// load target page into container
-		          	container.load(target + '.html');
-		        }
-	          
-	          	// Stop normal link behavior
-	          	return false;
-	        });
-	   	});
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/nav.js"></script>
+    <link rel="stylesheet" href="style/index.css"
   </head>
   <body style="background-image: url('images/background.jpg');">
     <table width="100%" height="100%">
     	<tr width="100%">
     		<td valign="top" align="center" colspan="2">
-                <nav id="nav">
-                    <ul>
-                    	<li><a href="#" data-target="home">Home</a></li>
-        				<li><a href="#" data-target="site">Website</a></li>
-        				<li><a href="#" data-target="tgsn">TheGamingSaloonNetwork</a></li>
-        				<li><a href="#" data-target="tgsn2">TheGamingSaloonNetwork2</a></li>
-        				<li><a href="#" data-target="bs">BattleSaloon</a></li>
-        				<li><a href="#" data-target="bs2">BattleSaloon2</a></li>
-        				<!--<li><a href="#" id="information-dialog">TGS Articles</a></li>
-		                        <li><a href="#" id="tgsn-dashboard">TGSN Dashboard</a></li>-->
-        				<li id="articleShown"><a href="#" data-target="tgsinformation">TGS Articles</a></li>
-        				<li id="articleHidden"><a href="#" data-target="tgsinformation2">TGS Articles</a></li>
-        			</ul>
-                </nav>
+    			<div class="navbar">
+	                <a href="#" data-target="home" id="nav">Home</a>
+	        		<a href="#" data-target="site" id="nav">Website</a>
+			        <a href="#" id="information-dialog">TGSN Tweets</a>
+				    <div class="dropdown">
+				    	<button class="dropbtn">Streams
+				    		<i class="fa fa-caret-down"></i>
+				    	</button>
+				    	<div class="dropdown-content">
+					        <a href="#" data-target="tgsn" id="nav">TheGamingSaloonNetwork</a>
+					        <a href="#" data-target="tgsn2" id="nav">TheGamingSaloonNetwork2</a>
+					        <a href="#" data-target="bs" id="nav">BattleSaloon</a>
+					        <a href="#" data-target="bs2" id="nav">BattleSaloon2</a>
+					    </div>
+					</div>
+			        <!--<a href="#" id="information-dialog">TGS Articles</a>
+			        <a href="#" id="tgsn-dashboard">TGSN Dashboard</a>-->
+	        		<a href="#" data-target="tgsinformation" id="articleShown">TGS Articles</a>
+	        		<a href="#" data-target="tgsinformation2" id="articleHidden">TGS Articles</a>
+	        	</div>
     		</td>
     	</tr>
     	<tr style="height: 100%">

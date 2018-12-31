@@ -4,13 +4,14 @@ var xhr = new XMLHttpRequest();
 
 //App Name
 function label(){
-  const label = 'TGSN App';
+  const label = 'TGSN App (Dev Build)';
+  //const label = 'TGSN App';
   return label;
 }
 
 //Build Number
 function buildNum(){
-  const build = '2018.12.30.1510';
+  const build = '2018.12.30.1940';
   return build;
 }
 
@@ -234,6 +235,15 @@ function createWindow () {
         height: 720
       })
       event.newGuest = new BrowserWindow(options)
+    }
+    else if (frameName === 'twitter') {
+      event.preventDefault()
+      Object.assign(options, {
+        modal: false,
+        parent: mainWindow,
+        width: 200,
+        height: 720
+      })
     }
   })
   // Create the browser window.

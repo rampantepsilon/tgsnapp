@@ -4,16 +4,23 @@ var xhr = new XMLHttpRequest();
 
 const informationBtn = document.getElementById('information-dialog')
 const tgsnDashBtn = document.getElementById('tgsn-dashboard')
+const tgsnTwitter = document.getElementById('tgsn-twitter')
 
 informationBtn.addEventListener('click', (event) => {
   	// renderer process (mainWindow)
-	let modal = window.open('tgsinformation.html')
+	let twitter = window.open('twitter.html')
   //ipcRenderer.send('open-information-dialog')
 })
 
 tgsnDashBtn.addEventListener('click', (event) => {
-  	// renderer process (mainWindow)
-	let modal = window.open('tgsndashboard.html')
+    // renderer process (mainWindow)
+  let modal = window.open('tgsndashboard.html')
+  //ipcRenderer.send('open-information-dialog')
+})
+
+tgsnTwitter.addEventListener('click', (event) => {
+    // renderer process (mainWindow)
+  let modal = window.open('twitter.html')
   //ipcRenderer.send('open-information-dialog')
 })
 
