@@ -29,6 +29,8 @@ $(document).ready(function(){
 	  	}
     	
     	else if (target == 'tgsn'){
+	  		$("#articles").hide();
+  			$("#articleHidden").hide();
         	$("#articleShown").show();
         	container.load(target + '.html');
     	}

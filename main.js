@@ -11,7 +11,7 @@ function label(){
 
 //Build Number
 function buildNum(){
-  const build = '2018.12.30.1940';
+  const build = '2019.1.3.1305';
   return build;
 }
 
@@ -79,13 +79,16 @@ let template = [{
   }]
 }, {
   label: 'About',
-  role: 'help',
+  role: 'about',
   submenu: [{
     label: label(),
+    role: 'about'
     },{
     label: "Version " + versionNum(),
+    role: 'about'
     },{
     label: "Build: " + buildNum(),
+    role: 'about'
     }]
 }]
 

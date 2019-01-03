@@ -1,0 +1,94 @@
+<table width="100%" height="100%">
+	<tr width="100%">
+		<td valign="top" align="center">
+			<button id="tgsnShow">Show TGSN</button>
+			<button id="tgsnHide">Hide TGSN</button>
+		</td>
+		<td valign="top" align="center">
+			<button id="tgsn2Show">Show TGSN2</button>
+			<button id="tgsn2Hide">Hide TGSN2</button>
+		</td>
+		<td valign="top" align="center">
+			<button id="bsShow">Show BS</button>
+			<button id="bsHide">Hide BS</button>
+		</td>
+		<td valign="top" align="center">
+			<button id="bs2Show">Show BS2</button>
+			<button id="bs2Hide">Hide BS2</button>
+		</td>
+	</tr>
+	<tr style="height: 100%">
+		<td style="height: 75%; width: 25%" id="v1" class="iframe-container">
+			<iframe src="https://player.twitch.tv/?channel=thegamingsaloonnetwork" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+		</td>
+		<td style="height: 75%; width: 25%" id="v2" class="iframe-container">
+			<iframe src="https://player.twitch.tv/?channel=thegamingsaloonnetwork2" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+		</td>
+		<td style="height: 75%; width: 25%" id="v3" class="iframe-container">
+			<iframe src="https://player.twitch.tv/?channel=battlesaloon" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+		</td>
+		<td style="height: 75%; width: 25%" id="v4" class="iframe-container">
+			<iframe src="https://player.twitch.tv/?channel=battlesaloon2" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+		</td>
+	</tr>
+	<tr style="height: 50%">
+		
+	</tr>
+</table>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#tgsnShow").hide();
+		$("#tgsnHide").show();
+		$("#tgsn2Show").show();
+		$("#tgsn2Hide").hide();
+		$("#bsShow").show();
+		$("#bsHide").hide();
+		$("#bs2Show").show();
+		$("#bs2Hide").hide();
+		$("#v1").show();
+		$("#v2").hide();
+		$("#v3").hide();
+		$("#v4").hide();
+
+		$("#tgsnShow").click(function(){
+			$("#tgsnShow").hide();
+			$("#tgsnHide").show();
+			$("#v1").show();
+		});
+		$("#tgsnHide").click(function(){
+			$("#tgsnShow").show();
+			$("#tgsnHide").hide();
+			$("#v1").hide();
+		});
+		$("#tgsn2Show").click(function(){
+			$("#tgsn2Show").hide();
+			$("#tgsn2Hide").show();
+			$("#v2").show();
+		});
+		$("#tgsn2Hide").click(function(){
+			$("#tgsn2Show").show();
+			$("#tgsn2Hide").hide();
+			$("#v2").hide();
+		});
+		$("#bsShow").click(function(){
+			$("#bsShow").hide();
+			$("#bsHide").show();
+			$("#v3").show();
+		});
+		$("#bsHide").click(function(){
+			$("#bsShow").show();
+			$("#bsHide").hide();
+			$("#v3").hide();
+		});
+		$("#bs2Show").click(function(){
+			$("#bs2Show").hide();
+			$("#bs2Hide").show();
+			$("#v4").show();
+		});
+		$("#bs2Hide").click(function(){
+			$("#bs2Show").show();
+			$("#bs2Hide").hide();
+			$("#v4").hide();
+		});
+	});
+</script>

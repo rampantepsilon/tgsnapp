@@ -17,10 +17,11 @@
 </ul>
 
 <h2>Changelog</h2>
-<h3>v1.2.0 (Tentative Release Date 1/10/2019)</h3>
+<h3>v1.2.0</h3>
 <ul>
 	<li>Added TGSN Twitter</li>
 	<li>Updated Navigation Bar to remove clutter</li>
+	<li>Added Framework for viewing all network channels simultaneously. (Viewable in 1.2.1 Build)
 </ul>
 <h3>v1.1.0</h3>
 <ul>

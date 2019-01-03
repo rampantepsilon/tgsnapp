@@ -29,7 +29,3 @@ ipcRenderer.on('information-dialog-selection', (event, index) => {
   if (index === 0) message += 'yes.'
   else message += 'no.'
 })
-
-function testWin () {
-	
-}
