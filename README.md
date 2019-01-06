@@ -22,7 +22,7 @@
 	<li>Removed Update Dialog from About until pushable updates is live</li>
 	<li>Added Chat to Network Simul-Cast</li>
 	<li>Changed Layout for Network Simul-Cast</li>
-	<li>Completed Network Simul-Cast v1</li>
+	<li>Completed Network Simul-Cast v0.1</li>
 </ul>
 <h3>v1.2.0</h3>
 <ul>
