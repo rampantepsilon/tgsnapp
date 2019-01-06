@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Gaming Saloon Network Hub 1.2.2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/nav.js"></script>
+    <link rel="stylesheet" href="style/index.css"
+  </head>
+  <body style="background-image: url('images/background.jpg');">
+    <table width="100%" height="100%">
+    	<tr width="100%">
+    		<td valign="top" align="center" colspan="2">
+    			<div class="navbar">
+	                <a href="#" data-target="home" id="nav">Home</a>
+	        		<a href="#" data-target="site" id="nav">Website</a>
+	        		<a href="#" onclick="window.open('twitter.html', 'TGSN Twitter', 'width=300, height=720')">TGSN Tweets</a>
+			        <!--<a href="#" id="information-dialog">TGSN Tweets</a>-->
+				    <div class="dropdown">
+				    	<button class="dropbtn">Streams
+				    		<i class="fa fa-caret-down"></i>
+				    	</button>
+				    	<div class="dropdown-content">
+					        <a href="#" data-target="tgsn" id="nav">TheGamingSaloonNetwork</a>
+					        <a href="#" data-target="tgsn2" id="nav">TheGamingSaloonNetwork2</a>
+					        <a href="#" data-target="bs" id="nav">BattleSaloon</a>
+					        <a href="#" data-target="bs2" id="nav">BattleSaloon2</a>
+                            <a href="#" data-target="multi" id="nav">Network Simul-Cast</a>
+					    </div>
+					</div>
+			        <!--<a href="#" id="information-dialog">TGS Articles</a>
+			        <a href="#" id="tgsn-dashboard">TGSN Dashboard</a>-->
+	        		<a href="#" data-target="tgsinformation" id="articleShown">TGS Articles</a>
+	        		<a href="#" data-target="tgsinformation2" id="articleHidden">TGS Articles</a>
+	        	</div>
+    		</td>
+    	</tr>
+    	<tr style="height: 100%">
+    		<td width="640px" id="articles">
+    			<object type="text/html" data="https://docs.google.com/document/d/1Olmkd5YKxz84c0G8BM20qBqXaWCPvdMV_mDkFQZl1TQ/edit?usp=sharing" width="100%" height="100%"></object>
+    		</td>
+    		<td style="height: 100%" align="center" id="content">
+                <img src="images/tgsn.jpg" width="1024" height="576"/><br>
+                <!--<button class="demo-button" id="information-dialog">View Demo</button>-->
+    		</td>
+    	</tr>
+    </table>
+    <script type="text/javascript">
+      require('./test/dialog')
+    </script>
+  </body>
+</html>

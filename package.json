@@ -1,0 +1,35 @@
+{
+  "name": "tgsn_hub",
+  "version": "1.2.2",
+  "description": "TGSN Hub",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rampantepsilon/tgsnapp.git"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "electron ."
+  },
+  "author": "Tom \"RampantEpsilon\" Ware",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.0.1",
+    "electron-log": "^2.2.17",
+    "jquery": "^3.3.1",
+    "nodejs": "0.0.0",
+    "update-electron-app": "^1.3.0",
+    "xhr2": "^0.1.4",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^13.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/rampantepsilon/tgsnapp/issues"
+  },
+  "homepage": "https://github.com/rampantepsilon/tgsnapp#readme",
+  "directories": {
+    "test": "test"
+  }
+}

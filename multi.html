@@ -1,0 +1,143 @@
+<table style="height: 100%; width: 100%;">
+	<tr style="height: 50%">
+		<td valign="top" style="width: 50px;" rowspan="2">
+			<table>
+				<tr>
+					<td valign="top" align="center">
+						<button id="tgsnShow">Show TGSN</button>
+						<button id="tgsnHide">Hide TGSN</button>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" align="center">
+						<button id="tgsn2Show">Show TGSN2</button>
+						<button id="tgsn2Hide">Hide TGSN2</button>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" align="center">
+						<button id="bsShow">Show BS</button>
+						<button id="bsHide">Hide BS</button>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" align="center">
+						<button id="bs2Show">Show BS2</button>
+						<button id="bs2Hide">Hide BS2</button>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table style="height: 100%; width: 100%">
+				<tr style="height: 100%; width: 100%">
+					<td style="height: 100%; width: 25%" id="v1">
+						<object type="text/html" data="https://player.twitch.tv/?channel=thegamingsaloonnetwork" width="100%" height="100%">
+					</td>
+					<td style="height: 100%; width: 25%" id="v2">
+						<object type="text/html" data="https://player.twitch.tv/?channel=thegamingsaloonnetwork2" width="100%" height="100%">
+					</td>
+					<td style="height: 100%; width: 25%" id="v3">
+						<object type="text/html" data="https://player.twitch.tv/?channel=battlesaloon" width="100%" height="100%">
+					</td>
+					<td style="height: 100%; width: 25%" id="v4">
+						<object type="text/html" data="https://player.twitch.tv/?channel=battlesaloon2" width="100%" height="100%">
+					</td>
+					<!--<td style="height: 75%; width: 25%" id="v4" class="iframe-container">
+						<iframe src="https://player.twitch.tv/?channel=battlesaloon2" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
+						https://www.twitch.tv/popout/thegamingsaloonnetwork/chat
+					</td>-->
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr style="height: 50%;">
+		<td>
+			<table style="height: 100%; width: 100%">
+				<tr style="height: 100%; width: 100%">
+					<td style="height: 100%; width: 25%" id="c1">
+						<object type="text/html" data="https://www.twitch.tv/embed/thegamingsaloonnetwork/chat" width="100%" height="100%">
+					</td>
+					<td style="height: 100%; width: 25%" id="c2">
+						<object type="text/html" data="https://www.twitch.tv/embed/thegamingsaloonnetwork2/chat" width="100%" height="100%">
+					</td>
+					<td style="height: 100%; width: 25%" id="c3">
+						<object type="text/html" data="https://www.twitch.tv/embed/battlesaloon/chat" width="100%" height="100%">
+					</td>
+					<td style="height: 100%; width: 25%" id="c4">
+						<object type="text/html" data="https://www.twitch.tv/embed/battlesaloon2/chat" width="100%" height="100%">
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#tgsnShow").hide();
+		$("#tgsnHide").show();
+		$("#tgsn2Show").hide();
+		$("#tgsn2Hide").show();
+		$("#bsShow").hide();
+		$("#bsHide").show();
+		$("#bs2Show").hide();
+		$("#bs2Hide").show();
+		$("#v1").show();
+		$("#v2").show();
+		$("#v3").show();
+		$("#v4").show();
+		$("#c1").show();
+		$("#c2").show();
+		$("#c3").show();
+		$("#c4").show();
+
+		$("#tgsnShow").click(function(){
+			$("#tgsnShow").hide();
+			$("#tgsnHide").show();
+			$("#v1").show();
+			$("#c1").show();
+		});
+		$("#tgsnHide").click(function(){
+			$("#tgsnShow").show();
+			$("#tgsnHide").hide();
+			$("#v1").hide();
+			$("#c1").hide();
+		});
+		$("#tgsn2Show").click(function(){
+			$("#tgsn2Show").hide();
+			$("#tgsn2Hide").show();
+			$("#v2").show();
+			$("#c2").show();
+		});
+		$("#tgsn2Hide").click(function(){
+			$("#tgsn2Show").show();
+			$("#tgsn2Hide").hide();
+			$("#v2").hide();
+			$("#c2").hide();
+		});
+		$("#bsShow").click(function(){
+			$("#bsShow").hide();
+			$("#bsHide").show();
+			$("#v3").show();
+			$("#c3").show();
+		});
+		$("#bsHide").click(function(){
+			$("#bsShow").show();
+			$("#bsHide").hide();
+			$("#v3").hide();
+			$("#c3").hide();
+		});
+		$("#bs2Show").click(function(){
+			$("#bs2Show").hide();
+			$("#bs2Hide").show();
+			$("#v4").show();
+			$("#c4").show();
+		});
+		$("#bs2Hide").click(function(){
+			$("#bs2Show").show();
+			$("#bs2Hide").hide();
+			$("#v4").hide();
+			$("#c4").hide();
+		});
+	});
+</script>
