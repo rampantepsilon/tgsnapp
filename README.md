@@ -16,7 +16,7 @@
 </ul>
 
 <h2>Changelog</h2>
-<h3>v1.2.2 (Release Date TBD)</h3>
+<h3>v1.2.2</h3>
 <ul>
 	<li>Modified About Menu to be non-clickable</li>
 	<li>Removed Update Dialog from About until pushable updates is live</li>
