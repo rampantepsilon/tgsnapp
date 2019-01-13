@@ -16,6 +16,10 @@
 </ul>
 
 <h2>Changelog</h2>
+<h3>v1.2.3</h3>
+<ul>
+	<li>Hotfix: Corrected issue where TGS Articles won't update for current week</li>
+</ul>
 <h3>v1.2.2</h3>
 <ul>
 	<li>Modified About Menu to be non-clickable</li>

@@ -11,7 +11,7 @@ function label(){
 
 //Build Number
 function buildNum(){
-  const build = '2019.1.5.1755';
+  const build = '2019.1.12.2105';
   return build;
 }
 
