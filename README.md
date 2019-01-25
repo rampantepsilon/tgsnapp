@@ -15,6 +15,26 @@
 	</li>
 </ul>
 
+<h2>Using the master build</h2>
+<ul>
+	<li>Download the git repo to a folder of your choice. For simplicity, this will be stated as [AppDir]</li>
+	<li>Make sure you have npm installed. (Use this <a href="https://www.npmjs.com/get-npm">link</a> to install)</li>
+	<li>In command prompt/terminal, change to the [AppDir] and run the following command -> npm init
+		<ul>
+			<li>Please note: Do not change anything that it asks during the initialization or you could potentially break the app.</li>
+		</ul>
+	</li>
+	<li>After npm init is complete run the following commands to get all of the dependencies:
+		<ul>
+			<li>npm install --save-dev electron</li>
+			<li>npm install xhr2</li>
+			<li>npm install jquery</li>
+		</ul>
+	</li>
+	<li>Once all dependencies are installed, run the following command to start the app -> npm start</li>
+	<li>Enjoy!</li>
+</ul>
+
 <h2>Changelog</h2>
 <h3>v1.3.0</h3>
 <ul>
