@@ -1,33 +1,5 @@
 <table style="height: 100%; width: 100%;">
-	<tr style="height: 50%">
-		<td valign="top" style="width: 50px;" rowspan="2">
-			<table>
-				<tr>
-					<td valign="top" align="center">
-						<button id="tgsnShow">Show TGSN</button>
-						<button id="tgsnHide">Hide TGSN</button>
-					</td>
-				</tr>
-				<tr>
-					<td valign="top" align="center">
-						<button id="tgsn2Show">Show TGSN2</button>
-						<button id="tgsn2Hide">Hide TGSN2</button>
-					</td>
-				</tr>
-				<tr>
-					<td valign="top" align="center">
-						<button id="bsShow">Show BS</button>
-						<button id="bsHide">Hide BS</button>
-					</td>
-				</tr>
-				<tr>
-					<td valign="top" align="center">
-						<button id="bs2Show">Show BS2</button>
-						<button id="bs2Hide">Hide BS2</button>
-					</td>
-				</tr>
-			</table>
-		</td>
+	<tr style="height: 50%" id="video">
 		<td>
 			<table style="height: 100%; width: 100%">
 				<tr style="height: 100%; width: 100%">
@@ -51,7 +23,7 @@
 			</table>
 		</td>
 	</tr>
-	<tr style="height: 50%;">
+	<tr style="height: 50%;" id="chat">
 		<td>
 			<table style="height: 100%; width: 100%">
 				<tr style="height: 100%; width: 100%">
@@ -71,9 +43,26 @@
 			</table>
 		</td>
 	</tr>
+	<tr width="100%">
+		<td valign="top" align="center" colspan="2">
+			<div class="navbar" id="multiLinks">
+				<a href="#" id="tgsnShow">Show TGSN</a>
+				<a href="#" id="tgsnHide">Hide TGSN</a>
+				<a href="#" id="tgsn2Show">Show TGSN2</a>
+				<a href="#" id="tgsn2Hide">Hide TGSN2</a>
+				<a href="#" id="bsShow">Show BattleSaloon</a>
+				<a href="#" id="bsHide">Hide BattleSaloon</a>
+				<a href="#" id="bs2Show">Show BattleSaloon2</a>
+				<a href="#" id="bs2Hide">Hide BattleSaloon2</a>
+				<a href="#" id="chatOnly">Chat Only Mode</a>
+				<a href="#" id="normal">Video + Chat Mode</a>
+        	</div>
+		</td>
+	</tr>
 </table>
 <script type="text/javascript">
 	$(document).ready(function(){
+		$("#normal").hide();
 		$("#tgsnShow").hide();
 		$("#tgsnHide").show();
 		$("#tgsn2Show").hide();
@@ -138,6 +127,18 @@
 			$("#bs2Hide").hide();
 			$("#v4").hide();
 			$("#c4").hide();
+		});
+		$("#chatOnly").click(function(){
+			$("#video").hide();
+			$("#chat").css("height", "100%");
+			$("#normal").show();
+			$("chatOnly").hide();
+		});
+		$("#normal").click(function(){
+			$("#video").show();
+			$("#chat").css("height", "50%");
+			$("#normal").hide();
+			$("chatOnly").show();
 		});
 	});
 </script>

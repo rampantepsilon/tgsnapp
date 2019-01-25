@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>The Gaming Saloon Network Hub 1.2.3</title>
+    <title>The Gaming Saloon Network Hub 1.3.0</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="scripts/nav.js"></script>
@@ -15,8 +15,9 @@
     			<div class="navbar">
 	                <a href="#" data-target="home" id="nav">Home</a>
 	        		<a href="#" data-target="site" id="nav">Website</a>
+	        		<a href="#" id="schedule">Schedule</a>
 	        		<a href="#" onclick="window.open('twitter.html', 'TGSN Twitter', 'width=300, height=720')">TGSN Tweets</a>
-			        <!--<a href="#" id="information-dialog">TGSN Tweets</a>-->
+                    <!--<a href="#" id="information-dialog">TGSN Tweets</a>-->
 				    <div class="dropdown">
 				    	<button class="dropbtn">Streams
 				    		<i class="fa fa-caret-down"></i>
@@ -26,7 +27,7 @@
 					        <a href="#" data-target="tgsn2" id="nav">TheGamingSaloonNetwork2</a>
 					        <a href="#" data-target="bs" id="nav">BattleSaloon</a>
 					        <a href="#" data-target="bs2" id="nav">BattleSaloon2</a>
-                            <a href="#" data-target="multi" id="nav">Network Simul-Cast v0.1 (BETA)</a>
+                            <a href="#" data-target="multi" id="nav">Network Simul-Cast v1.0</a>
 					    </div>
 					</div>
 			        <!--<a href="#" id="information-dialog">TGS Articles</a>
@@ -41,7 +42,8 @@
                 <iframe src="//tgsnetwork.org/tgsarticles" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
             </td>-->
     		<td width="640px" id="articles">
-    			<object type="text/html" data="http://tgsnetwork.org/tgsarticles" width="100%" height="100%"></object>
+    			<object type="text/html" data="tgs.html" width="100%" height="100%"></object>
+                <button class="demo-button" id="articlePopout" onclick="$('#articles').hide();$('#articleHidden').hide();$('#articleShown').show();">Popout Articles</button>
     		</td>
     		<td style="height: 100%" align="center" id="content">
                 <img src="images/tgsn.jpg" width="1024" height="576"/><br>
@@ -50,7 +52,7 @@
     	</tr>
     </table>
     <script type="text/javascript">
-      require('./test/dialog')
+      require('./scripts/dialog')
     </script>
   </body>
 </html>

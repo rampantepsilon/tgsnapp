@@ -11,7 +11,7 @@ function label(){
 
 //Build Number
 function buildNum(){
-  const build = '2019.1.12.2105';
+  const build = '2019.1.24.1950';
   return build;
 }
 
@@ -238,15 +238,6 @@ function createWindow () {
         height: 720
       })
       event.newGuest = new BrowserWindow(options)
-    }
-    else if (frameName === 'twitter') {
-      event.preventDefault()
-      Object.assign(options, {
-        modal: false,
-        parent: mainWindow,
-        width: 200,
-        height: 720
-      })
     }
   })
   // Create the browser window.

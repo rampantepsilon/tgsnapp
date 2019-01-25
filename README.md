@@ -16,6 +16,14 @@
 </ul>
 
 <h2>Changelog</h2>
+<h3>v1.3.0</h3>
+<ul>
+	<li>Added TGSN Schedule</li>
+	<li>Updated Controls for Network Simul-Cast</li>
+	<li>Added Chat Only Mode to Network Simul-Cast</li>
+	<li>Added Popout Feature for TGS Articles (Will be refined in v1.3.1)</li>
+	<li>Removed (BETA) tag from Network Simul-Cast and Defined as v1.0 (Will remove versioning once testing is completed)</li>
+</ul>
 <h3>v1.2.3</h3>
 <ul>
 	<li>Hotfix: Corrected issue where TGS Articles won't update for current week</li>
