@@ -232,10 +232,20 @@ function createWindow () {
       // open window as modal
       event.preventDefault()
       Object.assign(options, {
-        modal: true,
+        modal: false,
         parent: mainWindow,
         width: 1280,
         height: 720
+      })
+      event.newGuest = new BrowserWindow(options)
+    }
+    else if (frameName === 'articles') {
+      event.preventDefault()
+      Object.assign(options, {
+        modal: false,
+        parent: mainWindow,
+        width: 1000,
+        height: 600
       })
       event.newGuest = new BrowserWindow(options)
     }
