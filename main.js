@@ -4,14 +4,15 @@ var xhr = new XMLHttpRequest();
 
 //App Name
 function label(){
+  const label = 'TGSN App (BETA)';
   //const label = 'TGSN App (Dev Build)';
-  const label = 'TGSN App';
+  //const label = 'TGSN App';
   return label;
 }
 
 //Build Number
 function buildNum(){
-  const build = '2019.1.24.1950';
+  const build = '2019.1.29.1750';
   return build;
 }
 
@@ -233,7 +234,7 @@ function createWindow () {
       event.preventDefault()
       Object.assign(options, {
         modal: false,
-        parent: mainWindow,
+        //parent: mainWindow,
         width: 1280,
         height: 720
       })
@@ -245,6 +246,16 @@ function createWindow () {
         modal: false,
         parent: mainWindow,
         width: 1000,
+        height: 600
+      })
+      event.newGuest = new BrowserWindow(options)
+    }
+    else if (frameName === 'chat') {
+      event.preventDefault()
+      Object.assign(options, {
+        modal: false,
+        //parent: mainWindow,
+        width: 350,
         height: 600
       })
       event.newGuest = new BrowserWindow(options)

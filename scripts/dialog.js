@@ -9,6 +9,10 @@ const tgsnDashBtn = document.getElementById('tgsnDashboard')
 const tgsn2DashBtn = document.getElementById('tgsn2Dashboard')
 const bsDashBtn = document.getElementById('bsDashboard')
 const bs2DashBtn = document.getElementById('bs2Dashboard')
+const tgsnChatBtn = document.getElementById('tgsnChat')
+const tgsn2ChatBtn = document.getElementById('tgsn2Chat')
+const bsChatBtn = document.getElementById('bsChat')
+const bs2ChatBtn = document.getElementById('bs2Chat')
 	
 scheduleBtn.addEventListener('click', (event) => {
     // renderer process (mainWindow)
@@ -43,6 +47,32 @@ bsDashBtn.addEventListener('click', (event) => {
 bs2DashBtn.addEventListener('click', (event) => {
     // renderer process (mainWindow)
   let modal = window.open('https://twitch.tv/battlesaloon2/dashboard', 'modal')
+  //ipcRenderer.send('open-information-dialog')
+})
+
+tgsnChatBtn.addEventListener('click', (event) => {
+    // renderer process (mainWindow)
+  let modal = window.open('https://www.twitch.tv/embed/thegamingsaloonnetwork/chat?darkpopout', 'chat')
+  //ipcRenderer.send('open-information-dialog')
+})
+
+tgsn2ChatBtn.addEventListener('click', (event) => {
+    // renderer process (mainWindow)
+  let modal = window.open('https://www.twitch.tv/embed/thegamingsaloonnetwork2/chat?darkpopout', 'chat')
+  //ipcRenderer.send('open-information-dialog')
+})
+
+
+bsChatBtn.addEventListener('click', (event) => {
+    // renderer process (mainWindow)
+  let modal = window.open('https://www.twitch.tv/embed/battlesaloon/chat?darkpopout', 'chat')
+  //ipcRenderer.send('open-information-dialog')
+})
+
+
+bs2ChatBtn.addEventListener('click', (event) => {
+    // renderer process (mainWindow)
+  let modal = window.open('https://www.twitch.tv/embed/battlesaloon2/chat?darkpopout', 'chat')
   //ipcRenderer.send('open-information-dialog')
 })
 
