@@ -29,6 +29,7 @@
 			<li>npm install --save-dev electron</li>
 			<li>npm install xhr2</li>
 			<li>npm install jquery</li>
+			<li>npm install electron-devtools-installer --save-dev</li>
 		</ul>
 	</li>
 	<li>Once all dependencies are installed, run the following command to start the app -> npm start</li>
