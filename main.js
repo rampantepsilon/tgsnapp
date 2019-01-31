@@ -10,9 +10,9 @@ installExtension('fadndhdgpmmaapbmfcknlfgcflmmmieb')
     
 //App Name
 function label(){
-  const label = 'TGSN App (BETA)';
+  //const label = 'TGSN App (BETA)';
   //const label = 'TGSN App (Dev Build)';
-  //const label = 'TGSN App';
+  const label = 'TGSN App';
   return label;
 }
 

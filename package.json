@@ -1,6 +1,6 @@
 {
   "name": "tgsn_hub",
-  "version": "1.4.0-beta",
+  "version": "1.4.0",
   "description": "TGSN Hub",
   "repository": {
     "type": "git",
