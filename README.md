@@ -1,4 +1,5 @@
 <h1>The Gaming Saloon Network Hub</h1>
+<p><img src="https://raw.githubusercontent.com/rampantepsilon/tgsnapp/master/images/tgsn.jpg"></p>
 <p>Welcome one and all to the TGSN Hub. The one stop shop for all of The Gaming Saloon Network's content.</p>
 <p></p>
 <p>Want to make a suggestion for an addition to the app? Want to help test/build the app? Join our discussion on Discord! <a href="https://discord.gg/0n4kMmEMe1B1ZHuw">https://discord.gg/0n4kMmEMe1B1ZHuw</a></p>
