@@ -7,8 +7,7 @@
 <h2>Future Plans</h2>
 <ul>
 	<li>Add tools to add content to the TGSN site (Staff Only)</li>
-	<li>Add tools to modify dashboard content (Staff Only)</li>
-	<li>Add Automatic Updater for App (Delayed until Q2 2019)</li>
+	<li>Add Automatic Updater for App (Delayed until Q4 2019)</li>
 	<li>QoL Changes for additional support
 		<ul>
 			<li>Allowing users to view site content while watching streams</li>
@@ -30,7 +29,7 @@
 			<li>npm install --save-dev electron</li>
 			<li>npm install xhr2</li>
 			<li>npm install jquery</li>
-			<li>npm install electron-devtools-installer --save-dev</li>
+			<!--<li>npm install electron-devtools-installer --save-dev --no-audit</li>-->
 		</ul>
 	</li>
 	<li>Once all dependencies are installed, run the following command to start the app -> npm start</li>
@@ -38,6 +37,11 @@
 </ul>
 
 <h2>Changelog</h2>
+<h3>v1.4.1</h3>
+<ul>
+	<li>Hotfix: Corrected issue where app won't launch due to unexpected issue with the hook method for FFZ. FFZ will be temporarily disabled until this is fixed.</li>
+	<li>Updated the Splash Logo for the app</li>
+</ul>
 <h3>v1.4.0</h3>
 <ul>
 	<li>Added Dashboard links for staff members (Non-Staff will be able to click the link, but they won't have dashboard access)</li>
