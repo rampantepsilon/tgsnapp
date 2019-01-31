@@ -37,6 +37,15 @@
 </ul>
 
 <h2>Changelog</h2>
+<h3>v1.4.0</h3>
+<ul>
+	<li>Added Dashboard links for staff members (Non-Staff will be able to click the link, but they won't have dashboard access)</li>
+	<li>Added Chat Popouts for each channel (Handy for staff during streams. Not so useful for viewers.)</li>
+	<li>Added FrankerFaceZ support for chat. Now you can use our custom emotes in the app without installing extensions! (Temporarily only working in chat popout. This will be addressed in a later release.)</li>
+	<li>Fixed bug with "Chat Only Mode" in Network Multi-Cast where button wouldn't disappear as intended.</li>
+	<li>Updated Navigation Bar to resize properly with the app. No more Multi-Line Navigation bar because of wrapping</li>
+	<li>Other QoL improvements. (Actually there isn't anything else, but everyone says this so....)</li>
+</ul>
 <h3>v1.3.0</h3>
 <ul>
 	<li>Added TGSN Schedule</li>

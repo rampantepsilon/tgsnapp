@@ -7,7 +7,7 @@ const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-d
 installExtension('fadndhdgpmmaapbmfcknlfgcflmmmieb')
     .then((name) => console.log(`Added Extension:  ${name}`))
     .catch((err) => console.log('An error occurred: ', err));
-
+    
 //App Name
 function label(){
   const label = 'TGSN App (BETA)';
