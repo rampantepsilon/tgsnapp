@@ -5,10 +5,17 @@ $(document).ready(function(){
 	$("#articleHidden").hide();
 	$("#articleShown").hide();
 
+
 	// Set trigger and container variables
 	var trigger = $('.navbar a'),
     	container = $('#content'),
     	tgscontainer = $('#articles');
+  var d = new Date();
+  var day = d.getDay();
+
+  if (day == 6 || day == 0) {
+    $("#articleShown").show();
+  }
 
 	// Fire on click
 	trigger.on('click', function(){
@@ -28,18 +35,8 @@ $(document).ready(function(){
   			$("#articleShown").show();
 	  	}
     	
-    	else if (target == 'tgsn'){
-	  		$("#articles").hide();
-  			$("#articleHidden").hide();
-        	$("#articleShown").show();
-        	container.load(target + '.html');
-    	}
-  	
-  		else {
-        	$("#articles").hide();
-        	$("#articleHidden").hide()
-        	$("#articleShown").hide();
-      		// load target page into container
+    	else {
+        	// load target page into container
       		container.load(target + '.html');
     	}
   
