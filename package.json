@@ -23,7 +23,6 @@
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
-    "electron-devtools-installer": "^2.2.4",
     "electron-packager": "^13.0.1"
   },
   "bugs": {

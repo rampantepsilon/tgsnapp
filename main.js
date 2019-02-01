@@ -1,13 +1,7 @@
 const {BrowserWindow, Menu, app, shell, dialog2} = require('electron')
 var XMLHttpRequest = require("xhr2").XMLHttpRequest;
-var xhr = new XMLHttpRequest();
+var xhr = new XMLHttpRequest()
 
-/*const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer');
-
-installExtension('fadndhdgpmmaapbmfcknlfgcflmmmieb')
-    .then((name) => console.log(`Added Extension:  ${name}`))
-    .catch((err) => console.log('An error occurred: ', err));*/
-    
 //App Name
 function label(){
   //const label = 'TGSN App (BETA)';
