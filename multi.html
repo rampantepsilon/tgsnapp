@@ -1,19 +1,19 @@
 <table style="height: 100%; width: 100%;">
-	<tr style="height: 50%" id="video">
+	<tr height="45%" id="video">
 		<td>
 			<table style="height: 100%; width: 100%">
 				<tr style="height: 100%; width: 100%">
 					<td style="height: 100%; width: 25%" id="v1">
 						<object type="text/html" data="https://player.twitch.tv/?channel=thegamingsaloonnetwork" width="100%" height="100%">
 					</td>
-					<td style="height: 100%; width: 25%" id="v2">
-						<object type="text/html" data="https://player.twitch.tv/?channel=thegamingsaloonnetwork2" width="100%" height="100%">
+					<td style="height: 100%; width: 25%" id="c1">
+						<object type="text/html" data="https://www.twitch.tv/embed/thegamingsaloonnetwork/chat?darkpopout" width="100%" height="100%">
+					</td>
+					<td style="height: 100%; width: 25%" id="c3">
+						<object type="text/html" data="https://www.twitch.tv/embed/battlesaloon/chat?darkpopout" width="100%" height="100%">
 					</td>
 					<td style="height: 100%; width: 25%" id="v3">
 						<object type="text/html" data="https://player.twitch.tv/?channel=battlesaloon" width="100%" height="100%">
-					</td>
-					<td style="height: 100%; width: 25%" id="v4">
-						<object type="text/html" data="https://player.twitch.tv/?channel=battlesaloon2" width="100%" height="100%">
 					</td>
 					<!--<td style="height: 75%; width: 25%" id="v4" class="iframe-container">
 						<iframe src="https://player.twitch.tv/?channel=battlesaloon2" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
@@ -23,21 +23,21 @@
 			</table>
 		</td>
 	</tr>
-	<tr style="height: 50%;" id="chat">
+	<tr height="45%" id="chat">
 		<td>
 			<table style="height: 100%; width: 100%">
 				<tr style="height: 100%; width: 100%">
-					<td style="height: 100%; width: 25%" id="c1">
-						<object type="text/html" data="https://www.twitch.tv/embed/thegamingsaloonnetwork/chat?darkpopout" width="100%" height="100%">
+					<td style="height: 100%; width: 25%" id="v2">
+						<object type="text/html" data="https://player.twitch.tv/?channel=thegamingsaloonnetwork2" width="100%" height="100%">
 					</td>
 					<td style="height: 100%; width: 25%" id="c2">
 						<object type="text/html" data="https://www.twitch.tv/embed/thegamingsaloonnetwork2/chat?darkpopout" width="100%" height="100%">
 					</td>
-					<td style="height: 100%; width: 25%" id="c3">
-						<object type="text/html" data="https://www.twitch.tv/embed/battlesaloon/chat?darkpopout" width="100%" height="100%">
-					</td>
 					<td style="height: 100%; width: 25%" id="c4">
 						<object type="text/html" data="https://www.twitch.tv/embed/battlesaloon2/chat?darkpopout" width="100%" height="100%">
+					</td>
+					<td style="height: 100%; width: 25%" id="v4">
+						<object type="text/html" data="https://player.twitch.tv/?channel=battlesaloon2" width="100%" height="100%">
 					</td>
 				</tr>
 			</table>
@@ -129,14 +129,18 @@
 			$("#c4").hide();
 		});
 		$("#chatOnly").click(function(){
-			$("#video").hide();
-			$("#chat").css("height", "100%");
+			$("#c1").hide();
+			$("#c2").hide();
+			$("#c3").hide();
+			$("#c4").hide();
 			$("#normal").show();
 			$("#chatOnly").hide();
 		});
 		$("#normal").click(function(){
-			$("#video").show();
-			$("#chat").css("height", "50%");
+			$("#c1").show();
+			$("#c2").show();
+			$("#c3").show();
+			$("#c4").show();
 			$("#normal").hide();
 			$("#chatOnly").show();
 		});

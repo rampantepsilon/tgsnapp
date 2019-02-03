@@ -37,6 +37,11 @@
 </ul>
 
 <h2>Changelog</h2>
+<h3>v1.4.2 (master Only) [Release Date Pending]</h3>
+<ul>
+	<li>Updated Network Simul-Cast to align with v2.0.0 appearance</li>
+	<li>Dropped v1.0 from Network Simul-Cast as this is no longer needed</li>
+</ul>
 <h3>v1.4.1</h3>
 <ul>
 	<li>Hotfix: Corrected issue where app won't launch due to unexpected issue with the hook method for FFZ. FFZ will be temporarily disabled until this is fixed.</li>
