@@ -5,14 +5,14 @@ var xhr = new XMLHttpRequest()
 //App Name
 function label(){
   //const label = 'TGSN App (BETA)';
-  const label = 'TGSN App (Dev Build)';
-  //const label = 'TGSN App';
+  //const label = 'TGSN App (Dev Build)';
+  const label = 'TGSN App';
   return label;
 }
 
 //Build Number
 function buildNum(){
-  const build = '2019.1.31.1100';
+  const build = '2019.2.7.1915';
   return build;
 }
 
@@ -313,8 +313,8 @@ ipcMain.on('open-information-dialog', (event) => {
   const options = {
     type: 'info',
     title: 'Information',
-    message: 'messageText',
-    buttons: ['Yes', 'No']
+    message: 'This will be the last build for v1.x.\n\nJoin the Discord at https://discord.gg/0n4kMmEMe1B1ZHuw for more information about v2.0.0!',
+    buttons: ['Close']
   }
   dialog.showMessageBox(options, (index) => {
     event.sender.send('information-dialog-selection', index)

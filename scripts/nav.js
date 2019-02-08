@@ -17,6 +17,11 @@ $(document).ready(function(){
     $("#articleShown").show();
   }
 
+  $("#page").hide();
+  $("#intro").delay(1000).fadeOut(1000, function(){
+    $("#page").show();
+  })
+
 	// Fire on click
 	trigger.on('click', function(){
 	  	// Set $this for re-use. Set target from data attribute

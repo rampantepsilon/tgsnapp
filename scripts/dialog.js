@@ -13,11 +13,18 @@ const tgsnChatBtn = document.getElementById('tgsnChat')
 const tgsn2ChatBtn = document.getElementById('tgsn2Chat')
 const bsChatBtn = document.getElementById('bsChat')
 const bs2ChatBtn = document.getElementById('bs2Chat')
+const v2Btn = document.getElementById('v2')
   
 scheduleBtn.addEventListener('click', (event) => {
     // renderer process (mainWindow)
   let modal = window.open('schedule.html', 'modal')
   //ipcRenderer.send('open-information-dialog')
+})
+
+v2.addEventListener('click', (event) => {
+    // renderer process (mainWindow)
+  //let modal = window.open('schedule.html', 'modal')
+  ipcRenderer.send('open-information-dialog')
 })
 
 articlePop.addEventListener('click', (event) => {
@@ -77,7 +84,5 @@ bs2ChatBtn.addEventListener('click', (event) => {
 })
 
 ipcRenderer.on('information-dialog-selection', (event, index) => {
-  let message = 'You selected '
-  if (index === 0) message += 'yes.'
-  else message += 'no.'
+  let message = 'This will be the last build for v1.x. Join the Discord at https://discord.gg/0n4kMmEMe1B1ZHuw for more information about v2.0.0!';
 })
