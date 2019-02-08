@@ -37,10 +37,12 @@
 </ul>
 
 <h2>Changelog</h2>
-<h3>v1.4.2 (master Only) [Release Date Pending]</h3>
+<h3>v1.4.2</h3>
 <ul>
-	<li>Updated Network Simul-Cast to align with v2.0.0 appearance</li>
+	<li>Updated Network Simul-Cast to align with v2.0.0 appearance (Delayed due to bug with scripting)</li>
 	<li>Dropped v1.0 from Network Simul-Cast as this is no longer needed</li>
+	<li>Added a feature coming to v2.0.0 -> New Pre-Use Loading Screen (Note this is not really needed but it makes the app look like it's doing more. Use a build from master and comment out the lines in scripts/nav.js to remove it.)</li>
+	<li>Added Dialog to let everyone know that this will be the last v1.x.x release.</li>
 </ul>
 <h3>v1.4.1</h3>
 <ul>
