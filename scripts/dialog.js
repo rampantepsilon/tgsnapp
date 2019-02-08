@@ -13,7 +13,7 @@ const tgsnChatBtn = document.getElementById('tgsnChat')
 const tgsn2ChatBtn = document.getElementById('tgsn2Chat')
 const bsChatBtn = document.getElementById('bsChat')
 const bs2ChatBtn = document.getElementById('bs2Chat')
-	
+  
 scheduleBtn.addEventListener('click', (event) => {
     // renderer process (mainWindow)
   let modal = window.open('schedule.html', 'modal')
