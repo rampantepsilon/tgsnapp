@@ -5,21 +5,21 @@ var xhr = new XMLHttpRequest()
 
 //App Name
 function label(){
-  //const label = 'TGSN App (BETA)';
+  const label = 'TGSN App (BETA)';
   //const label = 'TGSN App (Dev Build)';
-  const label = 'TGSN App';
+  //const label = 'TGSN App';
   return label;
 }
 
 //Build Number
 function buildNum(){
-  const build = '2019.1.31.1100';
+  const build = '2019.2.16.1400';
   return build;
 }
 
 //Title
 function title(){
-  var title = 'The Gaming Saloon Network Hub 2.0.0-alpha';
+  var title = 'The Gaming Saloon Network Hub 2.0.0-beta';
   return title;
 }
 
@@ -83,10 +83,10 @@ let template = [{
   label: 'Window',
   role: 'window',
   submenu: [{
-    label: 'Toggle DevTools',
+    /*label: 'Toggle DevTools',
     accelerator: 'CmdOrCtrl+I',
     role: 'toggledevtools'
-  }, {
+  }, {*/
     label: 'Minimize',
     accelerator: 'CmdOrCtrl+M',
     role: 'minimize'
@@ -355,4 +355,3 @@ ipcMain.on('open-information-dialog', (event) => {
     event.sender.send('information-dialog-selection', index)
   })
 })
-
