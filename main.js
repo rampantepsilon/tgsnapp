@@ -1,4 +1,5 @@
 const {BrowserWindow, Menu, app, shell, dialog2} = require('electron')
+const { webFrame } = require('electron')
 var XMLHttpRequest = require("xhr2").XMLHttpRequest;
 var xhr = new XMLHttpRequest()
 
@@ -12,8 +13,14 @@ function label(){
 
 //Build Number
 function buildNum(){
-  const build = '2019.2.7.1915';
+  const build = '2019.1.31.1100';
   return build;
+}
+
+//Title
+function title(){
+  var title = 'The Gaming Saloon Network Hub 2.0.0-alpha';
+  return title;
 }
 
 //Application Menu
@@ -64,10 +71,22 @@ let template = [{
       }
     }
   }*/]
-}, {
+}/*, {
+  label: 'Chat Popouts',
+  role: 'window',
+  submenu: [{
+    label: 'TGSN Chat',
+    role: 'tgsnchat',
+    click () { require('electron').shell.openExternal('https://www.twitch.tv/embed/thegamingsaloonnetwork/chat?darkpopout', 'chat', 'width=350, height=600')}
+  }]
+}*/, {
   label: 'Window',
   role: 'window',
   submenu: [{
+    label: 'Toggle DevTools',
+    accelerator: 'CmdOrCtrl+I',
+    role: 'toggledevtools'
+  }, {
     label: 'Minimize',
     accelerator: 'CmdOrCtrl+M',
     role: 'minimize'
@@ -224,19 +243,33 @@ function createWindow () {
     width: 1280,
     height: 720,
     icon: __dirname + "/tgsn.png",
+    title: title(),
     webPreferences: {
       nativeWindowOpen: true
     }
   })
   mainWindow.webContents.on('new-window', (event, url, frameName, disposition, options, additionalFeatures) => {
-    if (frameName === 'modal') {
+    if (frameName === 'modal' || frameName === 'modal2' || frameName === 'modal3' || frameName === 'modal4' || frameName === 'site') {
       // open window as modal
       event.preventDefault()
       Object.assign(options, {
         modal: false,
         //parent: mainWindow,
         width: 1280,
-        height: 720
+        height: 720,
+        title: title(),
+      })
+      event.newGuest = new BrowserWindow(options)
+    }
+    else if (frameName === 'submenu') {
+      // open window as modal
+      event.preventDefault()
+      Object.assign(options, {
+        modal: true,
+        parent: mainWindow,
+        width: 1280,
+        height: 720,
+        title: title(),
       })
       event.newGuest = new BrowserWindow(options)
     }
@@ -246,7 +279,8 @@ function createWindow () {
         modal: false,
         parent: mainWindow,
         width: 1000,
-        height: 600
+        height: 600,
+        title: title(),
       })
       event.newGuest = new BrowserWindow(options)
     }
@@ -256,7 +290,8 @@ function createWindow () {
         modal: false,
         //parent: mainWindow,
         width: 350,
-        height: 600
+        height: 600,
+        title: title(),
       })
       event.newGuest = new BrowserWindow(options)
     }
@@ -268,7 +303,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools()
+  //win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
@@ -313,8 +348,8 @@ ipcMain.on('open-information-dialog', (event) => {
   const options = {
     type: 'info',
     title: 'Information',
-    message: 'This will be the last build for v1.x.\n\nJoin the Discord at https://discord.gg/0n4kMmEMe1B1ZHuw for more information about v2.0.0!',
-    buttons: ['Close']
+    message: 'messageText',
+    buttons: ['Yes', 'No']
   }
   dialog.showMessageBox(options, (index) => {
     event.sender.send('information-dialog-selection', index)

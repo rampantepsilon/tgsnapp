@@ -1,23 +1,54 @@
-<div id="twitch-embed" style="height: 100%"></div>
-    		
-<script src="https://embed.twitch.tv/embed/v1.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--<title>The Gaming Saloon Network Hub 2.0.0-alpha</title>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body style="background-image: url('images/background.jpg');">
+    <table width='100%' height='100%'>
+        <tr width="100%" id="return">
+            <td valign="top" align="center" colspan="2">
+                <div class="navbar">
+                    <a href="Javascript:window.close();">Back To Streams</a>
+                </div>
+            </td>
+        </tr>
+        <tr height="100%">
+            <td align='center'>
+                <div id="twitch-embed" style="height: 100%"></div>
+            
+                <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-<!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-<script type="text/javascript">
-	var embed = new Twitch.Embed("twitch-embed", {
-    	width: '100%',
-    	height: '100%',
-	    channel: 'thegamingsaloonnetwork2',
-        chat: "default",
-    	allowfullscreen: "true",
-	    theme: "dark",
-        autoplay: "true",
-  	});
+                <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+                <script type="text/javascript">
+                    var embed = new Twitch.Embed("twitch-embed", {
+                        width: '100%',
+                        height: '100%',
+                        channel: 'thegamingsaloonnetwork2',
+                        chat: "default",
+                        allowfullscreen: "true",
+                        theme: "dark",
+                        autoplay: "true",
+                    });
 
-	embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-    	var player = embed.getPlayer();
-    	player.setVolume(0.9);
-    	player.setMuted(false);
-    	player.play();
-  	});
-</script>
+                    embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                        var player = embed.getPlayer();
+                        player.setVolume(0.9);
+                        player.setMuted(false);
+                        player.play();
+                    });
+                </script>
+            </td>
+        </tr>
+    </table>
+    <script src="scripts/streams.js"></script>
+    <!--<script>
+        var sName = window.name;
+        document.getElementById('frame').innerHTML = sName;
+    </script>-->
+</body>
+</html>
