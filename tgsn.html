@@ -13,7 +13,7 @@
         <tr width="100%" id="return">
             <td valign="top" align="center" colspan="3">
                 <div class="navbar">
-                    <a href="Javascript:window.close();">Back To Streams</a>
+                  <a class="navigation" href="#" id='streams'>Back To Streams</a>
                 </div>
             </td>
         </tr>
@@ -28,7 +28,7 @@
             </td>
             <td align='center'>
                 <div id="twitch-embed" style="height: 100%"></div>
-            
+
                 <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
                 <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
@@ -52,12 +52,25 @@
                 </script>
             </td>
         </tr>
+        <tr width="100%">
+            <td valign="top" align="center" colspan="3">
+                <div class="navbar">
+                  <a class="navigation" href="#" id='tgsn'>Stream Not Loading? Click Here!</a>
+                </div>
+            </td>
+        </tr>
     </table>
     <script src="scripts/tgsn.js"></script>
-    <script src="./main.js"></script>
-    <!--<script>
-        var sName = window.name;
-        document.getElementById('frame').innerHTML = sName;
-    </script>-->
+    <script>
+    	// Redirect on click
+    	$('a').click(function() {
+    	  var page = $(this).attr('id');
+    	  var link = page + '.html';
+    		$("#content").load(link);
+    	})
+
+    	/*var sName = window.name;
+    	document.getElementById('frame').innerHTML = sName;*/
+    </script>
 </body>
 </html>

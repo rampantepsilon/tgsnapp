@@ -27,7 +27,9 @@
 	// Redirect on click
 	$('a').click(function() {
 	  var page = $(this).attr('id');
-	  if (page == 'home'){
+	  var link = page + '.html';
+		$("#content").load(link);
+	  /*if (page == 'home'){
 	  	var link = page + '.html';
 	  	$("#content").load( link );
 	  }
@@ -42,7 +44,7 @@
 	  }
 	  else if (page == 'bs2'){
 	  	window.open('bs2.html', 'submenu')
-	  }
+	  }*/
 	})
 
 	/*var sName = window.name;

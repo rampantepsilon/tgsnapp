@@ -29,13 +29,15 @@
 	  	$("#content").load( link );
 	  }
 	  else if (page == 'site'){
-	  	window.open('site.html', 'submenu');
+	  	var link = page + '.html';
+			$("#content").load(link);
 	  }
 	  else if (page == 'twitter'){
 	  	window.open('twitter.html', 'twitter', 'width=350, height=600');
 	  }
 	  else if (page == 'schedule'){
-	  	window.open('schedule.html', 'submenu')
+	  	var link = page + '.html';
+			$("#content").load(link);
 	  }
 	})
 
