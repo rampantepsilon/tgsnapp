@@ -6,7 +6,9 @@
 
 <h2>Future Plans</h2>
 <ul>
-	<li>Add tools to add content to the TGSN site (Staff Only)</li>
+	<li>Add Navigation images to app (this will be done before v2.1.0 is released)</li>
+	<li>Implement methods of showing multiple chats without refresh on Simul-Cast</li>
+	<li>Implement access to TGSNBot's Dashboard for staff members (Waitlisted until Q2 2019 due to security concerns)</li>
 	<li>Add Automatic Updater for App (Delayed until Q4 2019)</li>
 </ul>
 
@@ -32,26 +34,44 @@
 </ul>
 
 <h2>Changelog</h2>
+<h3>v2.0.1-beta</h3>
+<ul>
+	<li>Staff Tools Overhaul
+		<ul>
+			<li>Broke Dashboards and Chats from being displayed on Staff Links. Now they are each in respective parts of the app.</li>
+			<li>Added OCRemix Radio and YouTube Music Playlist for use on stream. (Staff members contact RampantEpsilon or peacemaker2448 on Discord with questions)</li>
+		</ul>
+	</li>
+	<li>Updated all links to BattleSaloon with links to RampantRuns as per announcement on Discord today</li>
+</ul>
 <h3>v2.0.0-beta</h3>
 <ul>
 	<li>Full App Redesign
-		<li>App appears to look more like a touchscreen app with bigger buttons for navigation and sections for each navigation</li>
+		<ul>
+			<li>App appears to look more like a touchscreen app with bigger buttons for navigation and sections for each navigation</li>
+		</ul>
 	</li>
 	<li>Simul-Cast Overhaul
-		<li>Chat is now in a side panel with the ability to only see one chat at a time. (Navigation under chat)</li>
-		<li>Chat window can be identified based on name above chat</li>
-		<li>Hiding individual streams allows others to take the full height and width of the frame</li>
+		<ul>
+			<li>Chat is now in a side panel with the ability to only see one chat at a time. (Navigation under chat)</li>
+			<li>Chat window can be identified based on name above chat</li>
+			<li>Hiding individual streams allows others to take the full height and width of the frame</li>
+		</ul>
 	</li>
 	<li>Staff Links Now Open Individual Windows without being on top of everything. (This may have been an issue seen before but it's completely removed now.)</li>
 	<li>Navigation Buttons are in beta state (Since this is new to the app they are very basic and meh buttons right now)</li>
 	<li>External Media Page
-		<li>Contains Site, Twitter, and Schedule (Currently Twitter is the only one not tied directly to the main window on the app)</li>
-		<li>Site allows for full access of the site's functions and can now be updated by staff using Tumblr's button in the upper right to login. (Please note you will have to login then reload the page to see the changes)</li>
+		<ul>
+			<li>Contains Site, Twitter, and Schedule (Currently Twitter is the only one not tied directly to the main window on the app)</li>
+			<li>Site allows for full access of the site's functions and can now be updated by staff using Tumblr's button in the upper right to login. (Please note you will have to login then reload the page to see the changes)</li>
+		</ul>
 	</li>
 	<li>TheGamingSaloonNetwork Stream Page
-		<li>Articles will be accessible from this page only</li>
-		<li>Articles are now in a side panel that can be toggled on or off</li>
-		<li>Articles remain with the popout button (Button can only be seen after pulling out the articles)</li>
+		<ul>
+			<li>Articles will be accessible from this page only</li>
+			<li>Articles are now in a side panel that can be toggled on or off</li>
+			<li>Articles remain with the popout button (Button can only be seen after pulling out the articles)</li>
+		</ul>
 	</li>
 	<li>QoL Improvements to make the app seem more realistic (i.e. Initial 'Loading' Screen, Ability to use Staff Tools while on other pages, etc.)</li>
 </ul>
