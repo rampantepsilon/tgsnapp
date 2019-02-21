@@ -19,7 +19,7 @@ function buildNum(){
 
 //Title
 function title(){
-  var title = 'The Gaming Saloon Network Hub 2.0.0-beta-2';
+  var title = 'The Gaming Saloon Network Hub 2.0.1-beta';
   return title;
 }
 
@@ -291,6 +291,28 @@ function createWindow () {
         //parent: mainWindow,
         width: 350,
         height: 600,
+        title: title(),
+      })
+      event.newGuest = new BrowserWindow(options)
+    }
+    else if (frameName === 'music') {
+      event.preventDefault()
+      Object.assign(options, {
+        modal: false,
+        //parent: mainWindow,
+        width: 800,
+        height: 300,
+        title: title(),
+      })
+      event.newGuest = new BrowserWindow(options)
+    }
+    else if (frameName === 'music1') {
+      event.preventDefault()
+      Object.assign(options, {
+        modal: false,
+        //parent: mainWindow,
+        width: 1050,
+        height: 550,
         title: title(),
       })
       event.newGuest = new BrowserWindow(options)
