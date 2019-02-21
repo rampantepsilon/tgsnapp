@@ -13,13 +13,13 @@ function label(){
 
 //Build Number
 function buildNum(){
-  const build = '2019.2.16.1400';
+  const build = '2019.2.21.1440';
   return build;
 }
 
 //Title
 function title(){
-  var title = 'The Gaming Saloon Network Hub 2.0.0-beta';
+  var title = 'The Gaming Saloon Network Hub 2.0.0-beta-2';
   return title;
 }
 
