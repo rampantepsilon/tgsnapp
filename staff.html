@@ -6,7 +6,7 @@
         	</div>
 		</td>
 	</tr>
-    <tr height='40%'>
+  <tr height='40%'>
 		<td align='center' class="nav" width="50%">
 			<a class="navigation" href="#" id="dashboards">Dashboards</a>
 		</td>
@@ -20,6 +20,7 @@
 		</td>
 		<td align='center' class='nav' width='50%'>
 			<a class='navigation' href='#' id='youtube'>YouTube Background Music</a>
+			<!--<a class='navigation' href='#' id='tgsnbot'>TGSNBot</a>-->
 		</td>
 	</tr>
 </table>
@@ -44,6 +45,9 @@
 	  }
 	  else if (page == 'youtube'){
 		  window.open('https://www.youtube.com/watch?v=J2QE8pR2lX4&list=PLPs7OF2cnAct5J54wD5L1O6pKQJMXqgTq&index=2&t=0s', 'music1')
+	  }
+	  else if (page == 'tgsnbot'){
+		  window.open('http://resources.tgsnetwork.org:25000/beta-panel', 'music1', 'webPreferences: { sandbox: true, allowRunningInsecureContent: true, safeDialogs: true, webSecurity: false, javascript: true, }'')
 	  }
 	});
 	/*var sName = window.name;
