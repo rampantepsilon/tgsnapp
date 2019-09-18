@@ -19,7 +19,7 @@ function buildNum(){
 
 //Title
 function title(){
-  var title = 'The Gaming Saloon Network Hub 2.1.0-beta';
+  var title = 'The Gaming Saloon Network Hub 2.1.0-rc1';
   return title;
 }
 
