@@ -1,0 +1,25 @@
+<table width='100%' height='100%'>
+	<tr height=50%'>
+		<td align='center' class="nav" width="50%">
+			<div id="twitch-embed" style="height: 99%"></div>
+      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+      <script type="text/javascript">
+      	var embed = new Twitch.Embed("twitch-embed", {
+        	width: '100%',
+          height: '100%',
+          channel: 'thegamingsaloonnetwork',
+          chat: "default",
+          allowfullscreen: "true",
+          theme: "dark",
+          autoplay: "true",
+        });
+        embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        	var player = embed.getPlayer();
+          player.setVolume(0.9);
+          player.setMuted(false);
+          player.play();
+        });
+			</script>
+		</td>
+	</tr>
+</table>

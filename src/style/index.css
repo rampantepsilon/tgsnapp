@@ -129,14 +129,14 @@ a.simulcast{
    width: 100%;
 }
 
-.link1, .link2, .link3, .link4, .link5, .link6, .link7{
+.link1, .link2, .link3, .link4, .link5, .link6, .link7, .link8{
 	background-color: black;
 	color: white;
 	font-size:18px;
 	font-family: Sancreek;
 }
 
-.link1:hover, .link2:hover, .link3:hover, .link4:hover, .link5:hover, .link6:hover, .link7:hover{
+.link1:hover, .link2:hover, .link3:hover, .link4:hover, .link5:hover, .link6:hover, .link7:hover, .link8:hover{
 	background-color: orange;
 	color: black;
 }
