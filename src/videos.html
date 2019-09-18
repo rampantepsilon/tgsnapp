@@ -1,0 +1,98 @@
+<html>
+<head>
+  <title>TGSN Recent Videos</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Raleway:600|Sancreek&display=swap" rel="stylesheet">
+   <style type="text/css">
+     html, body{
+       background-color: rgba(0,0,0,0);
+     }
+     a, a:visited{
+       color: white;
+     }
+     a:hover{
+       color: orange;
+     }
+     body{
+       font-family: 'Raleway', sans-serif;
+       /*font-family: 'Sancreek', cursive;*/
+     }
+     #videos{
+       text-align: center;
+     }
+     html {
+       overflow: scroll;
+       overflow-x: hidden;
+       overflow: -moz-scrollbars-none;
+       scrollbar-width: none;
+     }
+     ::-webkit-scrollbar {
+       width: 0px; /* remove scrollbar space /
+       background: transparent; / optional: just make scrollbar invisible /
+     }
+     / optional: show position indicator in red */
+     ::-webkit-scrollbar-thumb {
+       background: #FF0000;
+     }
+   </style>
+ </head>
+
+<body>
+  <script>
+    console.log("Begin Script");
+    $.ajax({
+      datatype: 'json',
+      url: 'https://api.twitch.tv/helix/videos?user_id=43584807&type=highlight',
+      headers: {
+        "Client-ID": 'o118lfy65junb52nuye0weh4xbvn11',
+      },
+      success: function(channel)
+      {
+        var thumbS = '<img src="';
+        var thumbE = '" width="225" height="127">';
+        var linkS = '<a href="';
+        var linkE = '" target="_blank">';
+        var linkC = '</a>';
+        console.log("Results:");
+        console.log(channel);
+        for (i=0; i<15; i++) {
+          var title = channel.data[i].title;
+          var thumb = channel.data[i].thumbnail_url;
+          var thumbC = thumb.replace("%{width}x%{height}", "1920x1080")
+          var link = channel.data[i].url;
+          var td = '#videos'+i;
+          $(td).append('<table width="245px"><tr><td align="center">' + linkS + link + linkE + thumbS + thumbC + thumbE + linkC + '</td></tr><tr><td style="background-color:rgba(0,0,0,0.75);text-align:center;">' + linkS + link + linkE + title + linkC + '</td></tr></table>');
+          console.log(channel.data[i].title);
+        }
+      },
+      error: function(){
+        console.log("The Request Failed");
+      }
+    });
+    console.log("End Script");
+  </script>
+  <table width="310px" align="center">
+    <tr>
+      <td id="videos0" valign='top'></td>
+      <td id="videos1" valign='top'></td>
+      <td id="videos2" valign='top'></td>
+      <td id="videos3" valign='top'></td>
+      <td id="videos4" valign='top'></td>
+    </tr>
+    <tr>
+      <td id="videos5" valign='top'></td>
+      <td id="videos6" valign='top'></td>
+      <td id="videos7" valign='top'></td>
+      <td id="videos8" valign='top'></td>
+      <td id="videos9" valign='top'></td>
+    </tr>
+    <tr>
+      <td id="videos10" valign='top'></td>
+      <td id="videos11" valign='top'></td>
+      <td id="videos12" valign='top'></td>
+      <td id="videos13" valign='top'></td>
+      <td id="videos14" valign='top'></td>
+    </tr>
+  </table>
+<body>
+</html>

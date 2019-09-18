@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Sancreek" rel="stylesheet">
     <link rel="stylesheet" href="style/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
   </head>
   <body style="background-image: url('images/background.jpg');">
     <table width="100%" height="100%">
@@ -15,6 +16,20 @@
     		<td style="height: 100%" align="center" id="content"></td>
         <td style="height: 100%" align="center" valign="middle" id="intro"></td>
     	</tr>
+      <tr height='50px' id='links'>
+        <td align='center'>
+          <table height='50px' width='100%'>
+            <tr>
+              <td align='center' width='183px' class='link1' onclick='redirect("home")'>Stream</td></a>
+              <td align='center' width='183px' class='link2' onclick='redirect("staff")'>Staff</td>
+              <td align='center' width='183px' class='link3' onclick='redirect("videos")'>Recent Videos</td>
+              <td align='center' width='183px' class='link4' onclick='redirect("tips")'>Tips</td>
+              <td align='center' width='183px' class='link5'>Schedule</td>
+              <td align='center' width='183px' class='link6' onclick='redirect("articles")'>TGS Articles</td></a>
+            </tr>
+          </table>
+        </td>
+      </tr>
       <tr height="1%">
       	<td align='center' colspan="2" class="nav">
       		<div id="version"></div>
@@ -31,6 +46,18 @@
       			}
       		});
       	});
+
+        // Redirect on click
+        function redirect(page) {
+          if (page == 'articles'){
+            window.open('https://beta.tgsnetwork.org/tgsarticles.html', '_blank');
+          } else if (page == 'tips'){
+            window.open('https://streamlabs.com/thegamingsaloonnetwork/tip?sl=169&t=42', '_blank');
+          } else {
+            var link = page + '.html';
+            $("#content").load( link );
+          }
+        }
     </script>
   </body>
 </html>

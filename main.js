@@ -83,10 +83,10 @@ let template = [{
   label: 'Window',
   role: 'window',
   submenu: [{
-    /*label: 'Toggle DevTools',
+    label: 'Toggle DevTools',
     accelerator: 'CmdOrCtrl+I',
     role: 'toggledevtools'
-  }, {*/
+  }, {
     label: 'Minimize',
     accelerator: 'CmdOrCtrl+M',
     role: 'minimize'
