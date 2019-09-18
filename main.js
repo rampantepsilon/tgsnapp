@@ -13,7 +13,7 @@ function label(){
 
 //Build Number
 function buildNum(){
-  const build = '2019.3.21';
+  const build = '2019.9.18';
   return build;
 }
 
@@ -322,7 +322,7 @@ function createWindow () {
   //win = new BrowserWindow({ width: 1280, height: 720, icon: __dirname + '/tgsn.png' })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('src/index.html')
 
   // Open the DevTools.
   //win.webContents.openDevTools()

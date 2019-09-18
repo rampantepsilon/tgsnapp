@@ -1,0 +1,130 @@
+html, body
+{
+	height: 98%;
+	color: white;
+}
+
+a {
+	color:white;
+	text-shadow: -1px -1px 0 black;
+	text-shadow: 1px -1px 0 black;
+	text-shadow: -1px 1px 0 black;
+	text-shadow: 1px 1px 0 black;
+	text-shadow: 3px 3px 0 black;
+	text-decoration: none;
+	font-family: Sancreek;
+}
+
+a.navigation{
+  font-size: 24px;
+}
+
+a.simulcast{
+  font-family: 12px;
+}
+
+.chatName{
+  color:white;
+  text-shadow: -1px -1px 0 black;
+  text-shadow: 1px -1px 0 black;
+  text-shadow: -1px 1px 0 black;
+  text-shadow: 1px 1px 0 black;
+  text-shadow: 3px 3px 0 black;
+  text-decoration: none;
+  font-family: Sancreek;
+  font-family: 12px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbarR {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  display:block;
+  font-size: 1.5vw;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbarR a {
+  float: left;
+  font-size: 1.5vw;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1.5vw;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .navbarR a:hover, .dropdown:hover .dropbtn {
+  background-color: #000;
+  color: #999;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  background-color: #333;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #000;
+  color: #999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 30%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
