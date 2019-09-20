@@ -24,7 +24,7 @@
               <td align='center' width='183px' class='link2' onclick='redirect("staff")'>Staff</td>
               <td align='center' width='183px' class='link3' onclick='redirect("videos")'>Recent Videos</td>
               <td align='center' width='183px' class='link4' onclick='redirect("tips")'>Tips</td>
-              <td align='center' width='183px' class='link5'>Schedule</td>
+              <td align='center' width='183px' class='link5' onclick='redirect("schedule")'>Schedule</td>
               <td align='center' width='183px' class='link6' onclick='redirect("articles")'>TGS Articles</td>
             </tr>
           </table>
@@ -52,9 +52,11 @@
         // Redirect on click
         function redirect(page) {
           if (page == 'articles'){
-            window.open('https://beta.tgsnetwork.org/tgsarticles.html', '_blank');
+            window.open('https://beta.tgsnetwork.org/tgsarticles', '_blank');
           } else if (page == 'tips'){
             window.open('https://streamlabs.com/thegamingsaloonnetwork/tip?sl=169&t=42', '_blank');
+          } else if (page == 'schedule'){
+            window.open('https://tgsnetwork.org/schedule', '_blank');
           } else {
             var link = page + '.html';
             $("#content").load( link );
