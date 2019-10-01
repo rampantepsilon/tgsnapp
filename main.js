@@ -5,21 +5,21 @@ var xhr = new XMLHttpRequest()
 
 //App Name
 function label(){
-  const label = 'TGSN App (BETA)';
+  //const label = 'TGSN App (BETA)';
   //const label = 'TGSN App (Dev Build)';
-  //const label = 'TGSN App';
+  const label = 'TGSN App';
   return label;
 }
 
 //Build Number
 function buildNum(){
-  const build = '2019.9.18';
+  const build = '2019.10.01';
   return build;
 }
 
 //Title
 function title(){
-  var title = 'The Gaming Saloon Network Hub 2.1.0-rc1';
+  var title = 'The Gaming Saloon Network Hub 3.0.0';
   return title;
 }
 
@@ -83,10 +83,10 @@ let template = [{
   label: 'Window',
   role: 'window',
   submenu: [{
-    label: 'Toggle DevTools',
+    /*label: 'Toggle DevTools',
     accelerator: 'CmdOrCtrl+I',
     role: 'toggledevtools'
-  }, {
+  }, {*/
     label: 'Minimize',
     accelerator: 'CmdOrCtrl+M',
     role: 'minimize'

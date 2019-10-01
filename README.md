@@ -6,10 +6,9 @@
 
 <h2>Future Plans</h2>
 <ul>
-	<li>Add Navigation images to app (this will be done before v2.1.0 is released)</li>
-	<li>Implement methods of showing multiple chats without refresh on Simul-Cast</li>
-	<li>Implement access to TGSNBot's Dashboard for staff members (Waitlisted until Q2 2019 due to security concerns)</li>
-	<li>Add Automatic Updater for App (Delayed until Q4 2019)</li>
+	<li>Add Additional Features to App for The Voiceless Saloon</li>
+	<li>QoL Changes to code to make it easier for others to contribute.</li>
+	<li>More to come</li>
 </ul>
 
 <h2>Using the master build</h2>
@@ -34,6 +33,27 @@
 </ul>
 
 <h2>Changelog</h2>
+<h3>v3.0.0</h3>
+<ul>
+	<li>Application Overhaul
+		<ul>
+			<li>All features have been reevaluated to remove unneeded features</li>
+			<li>App now starts on Streams Pages showing TGSN with the option to view TVS</li>
+			<li>Navigation is at the bottom to closer emulate mobile apps</li>
+			<li>Staff redirects to the Staff HQ
+				<ul>
+					<li>Staff can now login through the app and access all features of the Staff HQ</li>
+					<li>Dashboards can now be updated through the app</li>
+				</ul>
+			</li>
+			<li><i>NEW</i> Recent Videos will show the past 15 TGSN Videos</li>
+			<li>Added Ability to see the Tips Page, TGSN Schedule, and TGS Articles within the app</li>
+		</ul>
+	</li>
+	<li>Updater Overhaul
+		<ul>
+			<li>Updater will now 
+</ul>
 <h3>v2.0.1-beta</h3>
 <ul>
 	<li>Staff Tools Overhaul
