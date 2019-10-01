@@ -335,8 +335,8 @@ function createWindow () {
     //win = null
   })
 
-  BrowserWindow.addDevToolsExtension('FFZ/1.57_0/')
-  BrowserWindow.addDevToolsExtension('ABP/3.5.2_0/')
+  //BrowserWindow.addDevToolsExtension('FFZ/1.57_0/')
+  //BrowserWindow.addDevToolsExtension('ABP/3.5.2_0/')
 }
 
 // This method will be called when Electron has finished
