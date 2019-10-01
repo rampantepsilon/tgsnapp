@@ -52,7 +52,10 @@
 	</li>
 	<li>Updater Overhaul
 		<ul>
-			<li>Updater will now 
+			<li>Updater will now check for release versions on launch and notify when new releases are available.</li>
+			<li>Clicking the updater when there isn't a release version will instead check if there are any Alpha/Beta builds available</li>
+		</ul>
+	</li>
 </ul>
 <h3>v2.0.1-beta</h3>
 <ul>
