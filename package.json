@@ -9,7 +9,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "electron ."
+    "test": "electron .",
+    "build:snap": "electron-installer-snap --src=out/tgsn_hub-linux-x64"
   },
   "author": "Tom \"RampantEpsilon\" Ware",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
+    "electron-installer-snap": "^4.0.0",
     "electron-packager": "^13.1.1"
   },
   "bugs": {
