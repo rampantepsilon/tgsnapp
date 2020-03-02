@@ -1,4 +1,4 @@
 var version;
 version = {
-  'current':'3.0.0'
+  'current':'3.0.1'
 }

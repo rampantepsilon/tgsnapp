@@ -33,6 +33,16 @@
 </ul>
 
 <h2>Changelog</h2>
+<h3>v3.0.1</h3>
+<ul>
+	<li>Minor Patch
+		<ul>
+			<li>Removed TVS Stream Page</li>
+			<li>Removed Staff Page</li>
+		</ul>
+	</li>
+	<li>Removed features will be the last update to this app. Going forward the desktop app will not be updated.</li>
+</ul>
 <h3>v3.0.0</h3>
 <ul>
 	<li>Application Overhaul
