@@ -15,7 +15,7 @@
   "author": "Tom \"RampantEpsilon\" Ware",
   "license": "ISC",
   "dependencies": {
-    "electron": "^4.1.5",
+    "electron": "^13.6.6",
     "electron-log": "^2.2.17",
     "jquery": "^3.4.0",
     "nodejs": "0.0.0",
